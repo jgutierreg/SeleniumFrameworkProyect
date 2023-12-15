@@ -1,0 +1,39 @@
+plugins {
+    id 'java'
+}
+
+java {
+    sourceCompatibility = JavaVersion.VERSION_19
+}
+
+group = 'org.example'
+version = '1.0-SNAPSHOT'
+
+
+repositories {
+    mavenCentral()
+}
+
+dependencies {
+
+    testImplementation platform('org.junit:junit-bom:5.9.1')
+    testImplementation 'org.junit.jupiter:junit-jupiter-engine:5.10.0'
+    testImplementation 'org.junit.jupiter:junit-jupiter-api:5.10.0'
+    //Selenium
+    implementation 'org.seleniumhq.selenium:selenium-java:4.15.0'
+    //cucumber for Java
+    implementation 'io.cucumber:cucumber-java:7.0.0'
+    //cucumber Junit
+    testImplementation 'io.cucumber:cucumber-junit:7.14.0'
+    //data table cucumber
+    implementation 'io.cucumber:datatable:7.14.0'
+    // Mysql
+    implementation 'com.mysql:mysql-connector-j:8.2.0'
+    
+
+
+}
+
+test{
+    useJUnitPlatform()
+}
